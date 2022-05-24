@@ -8,6 +8,7 @@
 .page-2,
 .page-3,
 .page-4,
+.page-5,
 .page-active {
   position: absolute;
   height: 100vh;
@@ -38,8 +39,14 @@
   left: 300px;
   z-index: 4;
 }
+
+.page-5 {
+  background-color: #BEBEBE;
+  left: 400px;
+  z-index: 5;
+}
 .page-active {
-  transform: translate(calc(100vw - 400px), 0);
+  transform: translate(calc(100vw - 500px), 0);
 }
 
 .page-label {
@@ -51,6 +58,7 @@
 .page-label-text-2,
 .page-label-text-3,
 .page-label-text-4,
+.page-label-text-5,
 .page-label-text {
   color: black;
   margin: 0;
@@ -74,4 +82,8 @@
 
 .page-label-text-4 {
   color: #BEBEBE;
+}
+
+.page-label-text-5 {
+  color: #141414;
 }

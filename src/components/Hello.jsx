@@ -9,6 +9,7 @@ function Hello() {
       page2: true,
       page3: true,
       page4: true,
+      page5: true,
     }
   }
 
@@ -18,6 +19,7 @@ function Hello() {
   const pageTwo = state.pages.page2
   const pageThree = state.pages.page3
   const pageFour = state.pages.page4
+  const pageFive = state.pages.page5
 
   return (
     <>
@@ -54,6 +56,15 @@ function Hello() {
             <h3 className='page-label-text page-label-text-4'>Contact</h3>
           </div>
         </div>
+        <div
+          className={!pageFive ? 'page-5' : 'page-5 page-active'}
+          onClick={() => dispatch({ type: 'PAGE5'})}
+        > 
+          <div className='page-label'>
+            <h3 className='page-label-text page-label-text-5'>About</h3>
+          </div>
+        </div>
+        
       </div>
     </>
   )
