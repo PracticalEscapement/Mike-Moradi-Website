@@ -8,12 +8,26 @@ const TabNavigationReducer = (state, action) => {
           page3: true,
           page4: true,
           page5: true,
+        },
+        pageLabels: {
+          page1: false,
+          page2: true,
+          page3: true,
+          page4: true,
+          page5: true,
         }
       }
     case 'PAGE2':
       return {
         pages: {
           page1: false,
+          page2: false,
+          page3: true,
+          page4: true,
+          page5: true,
+        },
+        pageLabels: {
+          page1: true,
           page2: false,
           page3: true,
           page4: true,
@@ -28,6 +42,13 @@ const TabNavigationReducer = (state, action) => {
           page3: false,
           page4: true,
           page5: true,
+        },
+        pageLabels: {
+          page1: true,
+          page2: true,
+          page3: false,
+          page4: true,
+          page5: true,
         }
       }
     case 'PAGE4':
@@ -36,6 +57,13 @@ const TabNavigationReducer = (state, action) => {
           page1: false,
           page2: false,
           page3: false,
+          page4: false,
+          page5: true,
+        },
+        pageLabels: {
+          page1: true,
+          page2: true,
+          page3: true,
           page4: false,
           page5: true,
         }
@@ -47,6 +75,13 @@ const TabNavigationReducer = (state, action) => {
           page2: false,
           page3: false,
           page4: false,
+          page5: false,
+        },
+        pageLabels: {
+          page1: true,
+          page2: true,
+          page3: true,
+          page4: true,
           page5: false,
         }
       }
