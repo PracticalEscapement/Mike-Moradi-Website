@@ -29,7 +29,7 @@ function Hello() {
           onClick={() => dispatch({ type: 'PAGE1'})}
         >
           <div className='page-label'>
-            <h3 className='page-label-text page-label-text-1'>Hello</h3>
+            <h3 className='page-label-text page-label-text-dark'>Hello</h3>
           </div>
         </div>
         <div
@@ -37,7 +37,7 @@ function Hello() {
           onClick={() => dispatch({ type: 'PAGE2'})}
         >
           <div className='page-label'>
-            <h3 className='page-label-text page-label-text-2'>Projects</h3>
+            <h3 className='page-label-text page-label-text-light'>Projects</h3>
           </div>
         </div>
         <div
@@ -45,7 +45,7 @@ function Hello() {
           onClick={() => dispatch({ type: 'PAGE3'})}
         >
           <div className='page-label'>
-            <h3 className='page-label-text page-label-text-3'>Resume</h3>
+            <h3 className='page-label-text page-label-text-dark'>Resume</h3>
           </div>
         </div>
         <div
@@ -53,7 +53,7 @@ function Hello() {
           onClick={() => dispatch({ type: 'PAGE4'})}
         > 
           <div className='page-label'>
-            <h3 className='page-label-text page-label-text-4'>Contact</h3>
+            <h3 className='page-label-text page-label-text-light'>Contact</h3>
           </div>
         </div>
         <div
@@ -61,7 +61,7 @@ function Hello() {
           onClick={() => dispatch({ type: 'PAGE5'})}
         > 
           <div className='page-label'>
-            <h3 className='page-label-text page-label-text-5'>About</h3>
+            <h3 className='page-label-text page-label-text-dark'>About</h3>
           </div>
         </div>
         
