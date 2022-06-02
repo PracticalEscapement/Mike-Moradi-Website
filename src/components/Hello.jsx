@@ -34,12 +34,16 @@ function Hello() {
   const pageFourLabel = state.pageLabels.page4
   const pageFiveLabel = state.pageLabels.page5
 
+  const handlePageChange = (page) => {
+    dispatch({type: page})
+  }
+
   return (
     <>
       <div className='page-container'>
         <div
           className={!pageOne ? 'page-1' : 'page-1 page-active'}
-          onClick={() => dispatch({ type: 'PAGE1'})}
+          onClick={() => handlePageChange('PAGE1')}
         >
           <div className={!pageOneLabel ? 'page-label-active' : 'page-label'}>
             <h3 className={!pageOneLabel ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
@@ -49,7 +53,7 @@ function Hello() {
         </div>
         <div
           className={!pageTwo ? 'page-2' : 'page-2 page-active'}
-          onClick={() => dispatch({ type: 'PAGE2'})}
+          onClick={() => handlePageChange('PAGE2')}
         >
           <div className={!pageTwoLabel ? 'page-label-active' : 'page-label'}>
             <h3 className={!pageTwoLabel ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
@@ -59,17 +63,17 @@ function Hello() {
         </div>
         <div
           className={!pageThree ? 'page-3' : 'page-3 page-active'}
-          onClick={() => dispatch({ type: 'PAGE3'})}
+          onClick={() => handlePageChange('PAGE3')}
         >
           <div className={!pageThreeLabel ? 'page-label-active' : 'page-label'}>
-            <h3 className={!pageThreeLabel ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
+            <h3 className={!pageThreeLabel ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
               Resume
             </h3>
           </div>
         </div>
         <div
           className={!pageFour ? 'page-4' : 'page-4 page-active'}
-          onClick={() => dispatch({ type: 'PAGE4'})}
+          onClick={() => handlePageChange('PAGE4')}
         > 
           <div className={!pageFourLabel ? 'page-label-active' : 'page-label'}>
             <h3 className={!pageFourLabel ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
@@ -79,7 +83,7 @@ function Hello() {
         </div>
         <div
           className={!pageFive ? 'page-5' : 'page-5 page-active'}
-          onClick={() => dispatch({ type: 'PAGE5'})}
+          onClick={() => handlePageChange('PAGE5')}
         > 
           <div className={!pageFiveLabel ? 'page-label-active' : 'page-label'}>
             <h3 className={!pageFiveLabel ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>

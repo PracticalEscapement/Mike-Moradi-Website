@@ -1,4 +1,17 @@
 
+:root {
+  --tab-page-color-1: #fffffa;
+  --tab-page-color-2: #515052;
+  --tab-page-color-3: #000103;
+  --tab-page-color-4: #333138;
+  --tab-page-color-5: #ff312e;
+
+  --tab-text-color-1: black;
+  --tab-text-color-2: white;
+  --tab-text-color-3: white;
+  --tab-text-color-4: white;
+  --tab-text-color-5: black;
+}
 
 .page-container {
   margin: auto;
@@ -18,41 +31,33 @@
 }
 
 .page-1 {
-  background-color: #BEBEBE;
+  background-color: var(--tab-page-color-1);
   left: 0;
   z-index: 1;
 }
 
 .page-2 {
-  background-color: #141414;
+  background-color: var(--tab-page-color-2);
   left: 50px;
   z-index: 2;
-  box-shadow: 0px 3px 5px 7px rgba(0,0,0,0.7);
 }
 
 .page-3 {
-  background-color: #BEBEBE;
+  background-color: var(--tab-page-color-3);
   left: 100px;
   z-index: 3;
-  -webkit-box-shadow:0px 0px 10px 10px rgba(190,190,190,0.5);
-  -moz-box-shadow: 0px 0px 10px 10px rgba(190,190,190,0.5);
-  box-shadow: 0px 0px 10px 10px rgba(190,190,190,0.45);
 }
 
 .page-4 {
-  background-color: #141414;
+  background-color: var(--tab-page-color-4);
   left: 150px;
   z-index: 4;
-  box-shadow: 0px 3px 5px 7px rgba(0,0,0,0.7);
 }
 
 .page-5 {
-  background-color: #BEBEBE;
+  background-color: var(--tab-page-color-5);
   left: 200px;
   z-index: 5;
-  -webkit-box-shadow:0px 0px 10px 10px rgba(190,190,190,0.45);
-  -moz-box-shadow: 0px 0px 10px 10px rgba(190,190,190,0.45);
-  box-shadow: 0px 0px 10px 10px rgba(190,190,190,0.5);
 }
 .page-active {
   transform: translate(calc(100vw - 250px), 0);
@@ -84,11 +89,11 @@
 }
 
 .page-label-text-dark {
-  color: #141414;
+  color: var(--tab-text-color-1);
 }
 
 .page-label-text-light {
-  color: #BEBEBE;
+  color: var(--tab-text-color-2);
 }
 
 /* Responsive section */
