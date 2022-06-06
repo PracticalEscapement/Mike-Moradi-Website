@@ -3,86 +3,86 @@ const TabNavigationReducer = (state, action) => {
     case 'PAGE1':
       return {
         pages: {
-          page1: false,
-          page2: true,
-          page3: true,
-          page4: true,
-          page5: true,
+          page1: true,
+          page2: false,
+          page3: false,
+          page4: false,
+          page5: false,
         },
         pageLabels: {
-          page1: false,
-          page2: true,
-          page3: true,
-          page4: true,
-          page5: true,
+          page1: true,
+          page2: false,
+          page3: false,
+          page4: false,
+          page5: false,
         }
       }
     case 'PAGE2':
       return {
         pages: {
-          page1: false,
-          page2: false,
-          page3: true,
-          page4: true,
-          page5: true,
+          page1: true,
+          page2: true,
+          page3: false,
+          page4: false,
+          page5: false,
         },
         pageLabels: {
-          page1: true,
-          page2: false,
-          page3: true,
-          page4: true,
-          page5: true,
+          page1: false,
+          page2: true,
+          page3: false,
+          page4: false,
+          page5: false,
         }
       }
     case 'PAGE3':
       return {
         pages: {
-          page1: false,
-          page2: false,
-          page3: false,
-          page4: true,
-          page5: true,
-        },
-        pageLabels: {
           page1: true,
           page2: true,
-          page3: false,
-          page4: true,
-          page5: true,
+          page3: true,
+          page4: false,
+          page5: false,
+        },
+        pageLabels: {
+          page1: false,
+          page2: false,
+          page3: true,
+          page4: false,
+          page5: false,
         }
       }
     case 'PAGE4':
       return {
         pages: {
-          page1: false,
-          page2: false,
-          page3: false,
-          page4: false,
-          page5: true,
-        },
-        pageLabels: {
-          page1: true,
-          page2: true,
-          page3: true,
-          page4: false,
-          page5: true,
-        }
-      }
-    case 'PAGE5':
-      return {
-        pages: {
-          page1: false,
-          page2: false,
-          page3: false,
-          page4: false,
-          page5: false,
-        },
-        pageLabels: {
           page1: true,
           page2: true,
           page3: true,
           page4: true,
           page5: false,
+        },
+        pageLabels: {
+          page1: false,
+          page2: false,
+          page3: false,
+          page4: true,
+          page5: false,
+        }
+      }
+    case 'PAGE5':
+      return {
+        pages: {
+          page1: true,
+          page2: true,
+          page3: true,
+          page4: true,
+          page5: true,
+        },
+        pageLabels: {
+          page1: false,
+          page2: false,
+          page3: false,
+          page4: false,
+          page5: true,
         }
       }
   }

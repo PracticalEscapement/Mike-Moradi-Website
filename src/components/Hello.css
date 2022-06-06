@@ -5,6 +5,7 @@
   --tab-page-color-3: #000103;
   --tab-page-color-4: #333138;
   --tab-page-color-5: #ff312e;
+  --tab-page-color-active: blue;
 
   --tab-text-color-1: black;
   --tab-text-color-2: white;
@@ -28,6 +29,7 @@
   width: 100vw;
   transition: 1s ease;
   z-index: inherit;
+  transform: translate(calc(100vw - 250px), 0);
 }
 
 .page-1 {
@@ -60,7 +62,7 @@
   z-index: 5;
 }
 .page-active {
-  transform: translate(calc(100vw - 250px), 0);
+  transform: translate(0vw, 0);
 }
 
 .page-label {
@@ -106,41 +108,37 @@
   .page-5,
   .page-active {
     position: relative;
+    left: 0px;
     height: 20vh;
     width: 100vw;
     transition: 1s ease;
-    z-index: inherit;
-  }
-
-  .page-active {
-    height: 100vh;
-    width: 100vw;
+    z-index: auto;
     transform: translate(0, 0);
   }
 
   .page-1 {
-    background-color: #BEBEBE;
-    left: 0;
+    background-color: var(--tab-page-color-1);
   }
   
   .page-2 {
-    background-color: #141414;
-    left: 0;
+    background-color: var(--tab-page-color-2);
   }
   
   .page-3 {
-    background-color: #BEBEBE;
-    left: 0;
+    background-color: var(--tab-page-color-3);
   }
   
   .page-4 {
-    background-color: #141414;
-    left: 0;
+    background-color: var(--tab-page-color-4);
   }
   
   .page-5 {
-    background-color: #BEBEBE;
-    left: 0;
+    background-color: var(--tab-page-color-5);
+  }
+
+  .page-active {
+    width: 100vw;
+    background-color: var(--tab-page-color-active);
   }
 
   .page-label {
