@@ -1,9 +1,12 @@
 import Hello from './components/Hello'
+import { TabNavigationProvider } from './context/TabNavigationContext.js'
 
 function App() {
   return (
     <>
-      <Hello />
+      <TabNavigationProvider>
+        <Hello />
+      </TabNavigationProvider>
     </>
   );
 }

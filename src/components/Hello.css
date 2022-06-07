@@ -100,7 +100,8 @@
 
 /* Responsive section */
 
-@media (pointer: coarse) and (hover: none) {
+@media (pointer: coarse) and (hover: none),
+only screen and (max-width: 768px) {
   .page-1,
   .page-2,
   .page-3,

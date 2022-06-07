@@ -2,6 +2,7 @@ const TabNavigationReducer = (state, action) => {
   switch (action.type) {
     case 'PAGE1':
       return {
+        ...state,
         pages: {
           page1: true,
           page2: false,
@@ -19,6 +20,7 @@ const TabNavigationReducer = (state, action) => {
       }
     case 'PAGE2':
       return {
+        ...state,
         pages: {
           page1: true,
           page2: true,
@@ -36,6 +38,7 @@ const TabNavigationReducer = (state, action) => {
       }
     case 'PAGE3':
       return {
+        ...state,
         pages: {
           page1: true,
           page2: true,
@@ -53,6 +56,7 @@ const TabNavigationReducer = (state, action) => {
       }
     case 'PAGE4':
       return {
+        ...state,
         pages: {
           page1: true,
           page2: true,
@@ -70,6 +74,7 @@ const TabNavigationReducer = (state, action) => {
       }
     case 'PAGE5':
       return {
+        ...state,
         pages: {
           page1: true,
           page2: true,
@@ -85,6 +90,8 @@ const TabNavigationReducer = (state, action) => {
           page5: true,
         }
       }
+    default:
+      return state
   }
 }
 
