@@ -1,42 +1,32 @@
-import { useState, useReducer } from 'react'
-import TabNavigationReducer from '../context/TabNavigationReducer'
+import { useContext, useEffect } from 'react'
+import TabNavigationContext from '../context/TabNavigationContext'
 import './Hello.css'
 
 function Hello() {
-  const initialState = {
-    pages: {
-      page1: true,
-      page2: false,
-      page3: false,
-      page4: false,
-      page5: false,
-    },
-    pageLabels: {
-      page1: true,
-      page2: false,
-      page3: false,
-      page4: false,
-      page5: false,
-    }
-  }
 
-  const [state, dispatch] =  useReducer(TabNavigationReducer, initialState)
+  const { dispatch, pages, pageLabels } = useContext(TabNavigationContext)
 
-  const pageOne = state.pages.page1
-  const pageTwo = state.pages.page2
-  const pageThree = state.pages.page3
-  const pageFour = state.pages.page4
-  const pageFive = state.pages.page5
+  const pageOne = pages.page1
+  const pageTwo = pages.page2
+  const pageThree = pages.page3
+  const pageFour = pages.page4
+  const pageFive = pages.page5
 
-  const pageOneLabel = state.pageLabels.page1
-  const pageTwoLabel = state.pageLabels.page2
-  const pageThreeLabel = state.pageLabels.page3
-  const pageFourLabel = state.pageLabels.page4
-  const pageFiveLabel = state.pageLabels.page5
+  const pageOneLabel = pageLabels.page1
+  const pageTwoLabel = pageLabels.page2
+  const pageThreeLabel = pageLabels.page3
+  const pageFourLabel = pageLabels.page4
+  const pageFiveLabel = pageLabels.page5
 
   const handlePageChange = (page) => {
     dispatch({type: page})
+    localStorage.setItem("currentPage", JSON.stringify(page))
   }
+
+  useEffect(() => {
+    const page = localStorage.getItem("currentPage")
+    dispatch({type: JSON.parse(page)})
+  }, [])
 
   return (
     <>
