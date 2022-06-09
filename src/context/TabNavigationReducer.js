@@ -90,6 +90,24 @@ const TabNavigationReducer = (state, action) => {
           page5: true,
         }
       }
+    case 'MENU':
+      return {
+        ...state,
+        pages: {
+          page1: false,
+          page2: false,
+          page3: false,
+          page4: false,
+          page5: false,
+        },
+        pageLabels: {
+          page1: false,
+          page2: false,
+          page3: false,
+          page4: false,
+          page5: false,
+        }
+      }
     default:
       return state
   }

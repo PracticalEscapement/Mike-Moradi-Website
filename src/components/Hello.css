@@ -98,6 +98,10 @@
   color: var(--tab-text-color-2);
 }
 
+.menu-button {
+  display: none;
+}
+
 /* Responsive section */
 
 @media (pointer: coarse) and (hover: none),
@@ -189,4 +193,17 @@ only screen and (max-width: 768px) {
   .page-label-text-light {
     color: #BEBEBE;
   }
+
+  .menu-button {
+    display: flex;
+    align-self: end;
+    z-index: 7;
+    font-size: 50px;
+    margin: 7%;
+  }
+
+  .menu-button-clicked {
+    visibility: hidden;
+  }
+
 }
