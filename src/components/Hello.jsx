@@ -1,11 +1,13 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TabNavigationContext from '../context/TabNavigationContext'
 import './Hello.css'
+import { FaBars } from "react-icons/fa"
 
-function Hello({ page, pageRoute }) {
+function Hello({ pageRoute }) {
 
-  const { dispatch, pages, pageLabels } = useContext(TabNavigationContext)
+  const { dispatch, pages, pageLabels, menuColor } = useContext(TabNavigationContext)
+  const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
   const pageOne = pages.page1
@@ -22,16 +24,23 @@ function Hello({ page, pageRoute }) {
 
   const handlePageChange = (page, path) => {
     dispatch({type: page})
+    setMenuOpen(false)
     localStorage.setItem("currentPage", JSON.stringify(page))
     navigate(path)
   }
 
+  const menuClicked = () => {
+    dispatch({type: 'MENU'})
+    setMenuOpen(true)
+  }
+  
   useEffect(() => {
     const currentPage = localStorage.getItem("currentPage")
     dispatch({type: JSON.parse(currentPage)})
   }, [dispatch])
 
   useEffect(() => {
+    {pageRoute === 'PAGE1' ? console.log('CORRECT') : console.log('NOPE')} 
     dispatch({type: pageRoute})
     localStorage.setItem("currentPage", JSON.stringify(pageRoute))
   }, [pageRoute, dispatch])
@@ -39,6 +48,7 @@ function Hello({ page, pageRoute }) {
   return (
     <>
       <div className='page-container'>
+        <FaBars className={menuOpen ? 'menu-button-clicked' : `menu-button ${menuColor}`} onClick={menuClicked} />
         <div
           className={pageOne ? 'page-1 page-active' : 'page-1'}
           onClick={() => handlePageChange('PAGE1', '/')}
@@ -87,6 +97,7 @@ function Hello({ page, pageRoute }) {
             <h3 className={pageFiveLabel ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
               About
             </h3>
+
           </div>
         </div>
         

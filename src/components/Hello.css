@@ -98,48 +98,71 @@
   color: var(--tab-text-color-2);
 }
 
+.menu-button {
+  display: none;
+}
+
 /* Responsive section */
 
 @media (pointer: coarse) and (hover: none),
 only screen and (max-width: 768px) {
+
+  .page-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   .page-1,
   .page-2,
   .page-3,
   .page-4,
   .page-5,
   .page-active {
-    position: relative;
+    position: absolute;
     left: 0px;
     height: 20vh;
     width: 100vw;
-    transition: 1s ease;
-    z-index: auto;
+    transition: 1s ease-in-out;
+    z-index: inherit;
     transform: translate(0, 0);
+    animation-timing-function: linear;
   }
 
   .page-1 {
+    top: 0vh;
     background-color: var(--tab-page-color-1);
+    z-index: 1;
   }
   
   .page-2 {
+    top: 20vh;
     background-color: var(--tab-page-color-2);
+    z-index: 2;
   }
   
   .page-3 {
+    top: 40vh;
     background-color: var(--tab-page-color-3);
+    z-index: 3;
   }
   
   .page-4 {
+    top: 60vh;
     background-color: var(--tab-page-color-4);
+    z-index: 4;
   }
   
   .page-5 {
+    top: 80vh;
     background-color: var(--tab-page-color-5);
+    z-index: 5;
   }
 
   .page-active {
-    width: 100vw;
-    background-color: var(--tab-page-color-active);
+    top: 0vh;
+    z-index: 6;
+    height: 100vh;
   }
 
   .page-label {
@@ -157,6 +180,13 @@ only screen and (max-width: 768px) {
     transform: translateY(0%) rotate(0deg);
   }
 
+  .page-label-text-active {
+    color: black;
+    margin: 0;
+    position: absolute;
+    transform: rotate(0deg);
+  }
+
   .page-label-text-dark {
     color: #141414;
   }
@@ -164,4 +194,30 @@ only screen and (max-width: 768px) {
   .page-label-text-light {
     color: #BEBEBE;
   }
+
+  .menu-color-dark,
+  .menu-color-light,
+  .menu-button {
+    display: flex;
+    align-self: end;
+    z-index: 7;
+    font-size: 50px;
+    margin: 7%;
+    cursor: pointer;
+    transition-delay: 1000ms;
+    
+  }
+
+  .menu-button-clicked {
+    visibility: hidden;
+  }
+
+  .menu-color-dark {
+    color: #141414;
+  }
+
+  .menu-color-light {
+    color: #BEBEBE;
+  }
+
 }
