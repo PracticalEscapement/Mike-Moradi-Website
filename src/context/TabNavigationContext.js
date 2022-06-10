@@ -5,6 +5,7 @@ const TabNavigationContext = createContext()
 
 export const TabNavigationProvider = ({ children }) => {
   const initialState = {
+    menuColor: 'menu-color-dark',
     pages: {
       page1: true,
       page2: false,

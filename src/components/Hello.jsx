@@ -6,7 +6,7 @@ import { FaBars } from "react-icons/fa"
 
 function Hello({ pageRoute }) {
 
-  const { dispatch, pages, pageLabels } = useContext(TabNavigationContext)
+  const { dispatch, pages, pageLabels, menuColor } = useContext(TabNavigationContext)
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
@@ -40,6 +40,7 @@ function Hello({ pageRoute }) {
   }, [dispatch])
 
   useEffect(() => {
+    {pageRoute === 'PAGE1' ? console.log('CORRECT') : console.log('NOPE')} 
     dispatch({type: pageRoute})
     localStorage.setItem("currentPage", JSON.stringify(pageRoute))
   }, [pageRoute, dispatch])
@@ -47,7 +48,7 @@ function Hello({ pageRoute }) {
   return (
     <>
       <div className='page-container'>
-        <FaBars className={menuOpen ? 'menu-button-clicked' : 'menu-button'} onClick={menuClicked} />
+        <FaBars className={menuOpen ? 'menu-button-clicked' : `menu-button ${menuColor}`} onClick={menuClicked} />
         <div
           className={pageOne ? 'page-1 page-active' : 'page-1'}
           onClick={() => handlePageChange('PAGE1', '/')}

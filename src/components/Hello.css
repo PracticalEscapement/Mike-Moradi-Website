@@ -123,9 +123,10 @@ only screen and (max-width: 768px) {
     left: 0px;
     height: 20vh;
     width: 100vw;
-    transition: 1s ease;
+    transition: 1s ease-in-out;
     z-index: inherit;
     transform: translate(0, 0);
+    animation-timing-function: linear;
   }
 
   .page-1 {
@@ -194,16 +195,29 @@ only screen and (max-width: 768px) {
     color: #BEBEBE;
   }
 
+  .menu-color-dark,
+  .menu-color-light,
   .menu-button {
     display: flex;
     align-self: end;
     z-index: 7;
     font-size: 50px;
     margin: 7%;
+    cursor: pointer;
+    transition-delay: 1000ms;
+    
   }
 
   .menu-button-clicked {
     visibility: hidden;
+  }
+
+  .menu-color-dark {
+    color: #141414;
+  }
+
+  .menu-color-light {
+    color: #BEBEBE;
   }
 
 }
