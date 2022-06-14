@@ -123,10 +123,9 @@ only screen and (max-width: 768px) {
     left: 0px;
     height: 20vh;
     width: 100vw;
-    transition: 1s ease-in-out;
     z-index: inherit;
-    transform: translate(0, 0);
-    animation-timing-function: linear;
+    transition: 0.5s ease;
+    transform: translate(0, 0); 
   }
 
   .page-1 {
@@ -160,8 +159,8 @@ only screen and (max-width: 768px) {
   }
 
   .page-active {
-    top: 0vh;
-    z-index: 6;
+    top: 0;
+    z-index: 7;
     height: 100vh;
   }
 
@@ -200,11 +199,11 @@ only screen and (max-width: 768px) {
   .menu-button {
     display: flex;
     align-self: end;
-    z-index: 7;
+    z-index: 100;
     font-size: 50px;
     margin: 7%;
     cursor: pointer;
-    transition-delay: 1000ms;
+    transition-delay: 500ms;
     
   }
 
