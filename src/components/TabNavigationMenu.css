@@ -24,8 +24,8 @@
 .page-4,
 .page-5,
 .page-active {
-  position: absolute;
-  height: 100vh;
+  position: fixed;
+  height: 100%;
   width: 100vw;
   transition: 1s ease;
   z-index: inherit;
@@ -66,7 +66,7 @@
 }
 
 .page-label {
-  position: relative;
+  position: absolute;
   height: 100vh;
 }
 
@@ -102,6 +102,7 @@
   display: none;
 }
 
+
 /* Responsive section */
 
 @media (pointer: coarse) and (hover: none),
@@ -123,10 +124,9 @@ only screen and (max-width: 768px) {
     left: 0px;
     height: 20vh;
     width: 100vw;
-    transition: 1s ease-in-out;
     z-index: inherit;
+    transition: 0.4s ease;
     transform: translate(0, 0);
-    animation-timing-function: linear;
   }
 
   .page-1 {
@@ -198,13 +198,15 @@ only screen and (max-width: 768px) {
   .menu-color-dark,
   .menu-color-light,
   .menu-button {
-    display: flex;
-    align-self: end;
-    z-index: 7;
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 100;
     font-size: 50px;
     margin: 7%;
     cursor: pointer;
-    transition-delay: 1000ms;
+    transition-delay: 500ms;
     
   }
 

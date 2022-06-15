@@ -1,10 +1,16 @@
 import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TabNavigationContext from '../context/TabNavigationContext'
-import './Hello.css'
+import './TabNavigationMenu.css'
 import { FaBars } from "react-icons/fa"
 
-function Hello({ pageRoute }) {
+import Hello from './pages/Hello'
+import Projects from './pages/Projects'
+import Resume from './pages/Resume'
+import Contact from './pages/Contact'
+import About from './pages/About'
+
+function TabNavigationMenu({ pageRoute }) {
 
   const { dispatch, pages, pageLabels, menuColor } = useContext(TabNavigationContext)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -16,11 +22,11 @@ function Hello({ pageRoute }) {
   const pageFour = pages.page4
   const pageFive = pages.page5
 
-  const pageOneLabel = pageLabels.page1
-  const pageTwoLabel = pageLabels.page2
-  const pageThreeLabel = pageLabels.page3
-  const pageFourLabel = pageLabels.page4
-  const pageFiveLabel = pageLabels.page5
+  const pageOneActive = pageLabels.page1
+  const pageTwoActive = pageLabels.page2
+  const pageThreeActive = pageLabels.page3
+  const pageFourActive = pageLabels.page4
+  const pageFiveActive = pageLabels.page5
 
   const handlePageChange = (page, path) => {
     dispatch({type: page})
@@ -39,8 +45,7 @@ function Hello({ pageRoute }) {
     dispatch({type: JSON.parse(currentPage)})
   }, [dispatch])
 
-  useEffect(() => {
-    {pageRoute === 'PAGE1' ? console.log('CORRECT') : console.log('NOPE')} 
+  useEffect(() => { 
     dispatch({type: pageRoute})
     localStorage.setItem("currentPage", JSON.stringify(pageRoute))
   }, [pageRoute, dispatch])
@@ -53,51 +58,65 @@ function Hello({ pageRoute }) {
           className={pageOne ? 'page-1 page-active' : 'page-1'}
           onClick={() => handlePageChange('PAGE1', '/')}
         >
-          <div className={pageOneLabel ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageOneLabel ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
+          <div className={pageOneActive ? 'page-label-active' : 'page-label'}>
+            <h3 className={pageOneActive ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
               Hello
             </h3>
+            {pageOneActive &&
+                <Hello />
+            }
           </div>
         </div>
         <div
           className={pageTwo ? 'page-2 page-active' : 'page-2'}
           onClick={() => handlePageChange('PAGE2', '/projects')}
         >
-          <div className={pageTwoLabel ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageTwoLabel ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
+          <div className={pageTwoActive ? 'page-label-active' : 'page-label'}>
+            <h3 className={pageTwoActive ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
               Projects
             </h3>
+            {pageTwoActive &&
+              <Projects />
+            }
           </div>
         </div>
         <div
           className={pageThree ? 'page-3 page-active' : 'page-3'}
           onClick={() => handlePageChange('PAGE3', '/resume')}
         >
-          <div className={pageThreeLabel ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageThreeLabel ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
+          <div className={pageThreeActive ? 'page-label-active' : 'page-label'}>
+            <h3 className={pageThreeActive ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
               Resume
             </h3>
+            {pageThreeActive &&
+              <Resume />
+            }
           </div>
         </div>
         <div
           className={pageFour ? 'page-4 page-active' : 'page-4'}
           onClick={() => handlePageChange('PAGE4', '/contact')}
         > 
-          <div className={pageFourLabel ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageFourLabel ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
+          <div className={pageFourActive ? 'page-label-active' : 'page-label'}>
+            <h3 className={pageFourActive ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
               Contact
             </h3>
+            {pageFourActive && 
+              <Contact />
+            }
           </div>
         </div>
         <div
           className={pageFive ? 'page-5 page-active' : 'page-5'}
           onClick={() => handlePageChange('PAGE5', '/about')}
         > 
-          <div className={pageFiveLabel ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageFiveLabel ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
+          <div className={pageFiveActive ? 'page-label-active' : 'page-label'}>
+            <h3 className={pageFiveActive ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
               About
             </h3>
-
+            {pageFiveActive &&
+              <About />
+            }
           </div>
         </div>
         
@@ -106,4 +125,4 @@ function Hello({ pageRoute }) {
   )
 }
 
-export default Hello
+export default TabNavigationMenu
