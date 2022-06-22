@@ -1,11 +1,10 @@
 
 :root {
-  --tab-page-color-1: #fffffa;
-  --tab-page-color-2: #515052;
-  --tab-page-color-3: #000103;
-  --tab-page-color-4: #333138;
-  --tab-page-color-5: #ff312e;
-  --tab-page-color-active: blue;
+  --tab-page-color-1: #EEF0F2;
+  --tab-page-color-2: #C6C7C4;
+  --tab-page-color-3: #A2999E;
+  --tab-page-color-4: #846A6A;
+  --tab-page-color-5: #353B3C;
 
   --tab-text-color-1: black;
   --tab-text-color-2: white;
@@ -16,6 +15,7 @@
 
 .page-container {
   margin: auto;
+  height: auto;
 }
 
 .page-1,
@@ -29,36 +29,36 @@
   width: 100vw;
   transition: 1s ease;
   z-index: inherit;
-  transform: translate(calc(100vw - 250px), 0);
+  transform: translate(calc(100vw - 12.5vw), 0);
 }
 
 .page-1 {
   background-color: var(--tab-page-color-1);
-  left: 0;
+  left: 0vw;
   z-index: 1;
 }
 
 .page-2 {
   background-color: var(--tab-page-color-2);
-  left: 50px;
+  left: 2.5vw;
   z-index: 2;
 }
 
 .page-3 {
   background-color: var(--tab-page-color-3);
-  left: 100px;
+  left: 5vw;
   z-index: 3;
 }
 
 .page-4 {
   background-color: var(--tab-page-color-4);
-  left: 150px;
+  left: 7.5vw;
   z-index: 4;
 }
 
 .page-5 {
   background-color: var(--tab-page-color-5);
-  left: 200px;
+  left: 10vw;
   z-index: 5;
 }
 .page-active {
@@ -68,15 +68,22 @@
 .page-label {
   position: absolute;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-label-active {
-  position: fixed;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 3vh;
 }
 
 .page-label-text {
+  font-size: 1.3em;
   color: black;
-  margin-left: -10px;
+  margin-left: 1.1em;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -85,6 +92,7 @@
 
 .page-label-text-active {
   color: black;
+  font-size: 5em;
   margin: 0;
   position: absolute;
   transform: rotate(0deg);
