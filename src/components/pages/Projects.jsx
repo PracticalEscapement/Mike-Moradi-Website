@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import Card from '../card/Card'
 import './projects.css'
+import { useState } from 'react'
 import Ramen from '../../assests/ramen.png'
 import { IoLogoJavascript } from "react-icons/io";
 import { SiRubyonrails } from "react-icons/si";
@@ -73,7 +72,11 @@ function Projects() {
                     <DiReact className='tech__icon' />
                   </div>
                   <div className="code">
-                    Check Out My Code
+                    <h4>Check Out My Code</h4>
+                    <div className='code__links'>
+                      <a href='https://github.com/PracticalEscapement/ramaan-react' target="_blank" rel="noopener noreferrer">Frontend</a>
+                      <a href='https://github.com/PracticalEscapement/ramaan' target="_blank" rel="noopener noreferrer">Backend</a>
+                    </div>
                   </div>
                 </div>
               </div>
