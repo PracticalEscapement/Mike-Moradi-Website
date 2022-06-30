@@ -75,10 +75,10 @@ function TabNavigationMenu({ pageRoute }) {
             <h3 className={pageTwoActive ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
               Projects
             </h3>
+          </div>
             {pageTwoActive &&
               <Projects />
             }
-          </div>
         </div>
         <div
           className={pageThree ? 'page-3 page-active' : 'page-3'}
