@@ -1,6 +1,7 @@
 // Tech logos
 
 IoLogoJavascript
+IoLogoCss3
 IoLogoPython
 SiRubyonrails
 DiRuby

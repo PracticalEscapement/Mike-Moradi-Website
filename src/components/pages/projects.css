@@ -31,7 +31,7 @@
   display: flex;
   position: absolute;
   width: 50vw;
-  height: 50vh;
+  max-height: 50vh;
 }
 
 .pb--heading {
@@ -51,8 +51,12 @@
   height: auto;
   box-shadow: 4px 4px 2px #A2999E;
   z-index: 20;
-  transition-delay: 1s;
   overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.pb--body::-webkit-scrollbar {
+  display: none; /* chrome and safarai */
 }
 
 .pb--tech {
@@ -62,7 +66,7 @@
   flex-direction: column;
   z-index: 20;
   height: auto;
-  padding: 2%;
+  padding: 2% 2% 0 2%;
   background-color: #EEF0F2;
   border-radius: 15px;
   box-shadow: 4px 4px 2px #A2999E;
@@ -101,7 +105,7 @@ p {
 }
 
 .tech__icon {
-  font-size: 4em;
+  font-size: 5vw;
   border: 1px solid black;
   border-radius: 10px;
   padding: 2%;
@@ -111,10 +115,24 @@ p {
 .code {
   width: 100%;
   display: flex;
-  justify-content: center;
-  font-size: 2em;
+  flex-direction: column;
+  align-items: center;
 }
 
+.code h4 {
+  font-size: 2vw;
+}
+
+.code__links {
+  display: flex;
+  gap: 1vw;
+  padding-bottom: 5%;
+}
+
+.code__links a {
+  font-size: 1.3em;
+  cursor: pointer;
+}
 /* buttons */
 
 .btn__container {
@@ -146,17 +164,6 @@ p {
   transition-duration: 1s;
   
 }
-
-/*
-.btn__description:active {
-  z-index: 30;
-  position: absolute;
-  background-color: #EEF0F2;
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-}
-*/
 
 .btn__close {
   font-size: 2em;
