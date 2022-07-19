@@ -81,6 +81,7 @@
 }
 
 .page-label-text {
+  cursor: pointer;
   font-size: 1.3em;
   color: black;
   margin-left: 1.1em;
