@@ -1,4 +1,3 @@
-import Card from '../card/Card'
 import './hello.css'
 import headShot from '../../assests/snap-shot.png'
 
