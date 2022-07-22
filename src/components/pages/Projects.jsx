@@ -1,5 +1,6 @@
 import './projects.css'
 import TheRamenCritique from '../projects/TheRamenCritique'
+import TheWatchStore from '../projects/TheWatchStore'
 
 function Projects() {
 
@@ -7,8 +8,7 @@ function Projects() {
     <>
       <div className='projects__container'>
         <TheRamenCritique />
-        <TheRamenCritique />
-        <TheRamenCritique />
+        <TheWatchStore />
       </div>
     </>
   )
