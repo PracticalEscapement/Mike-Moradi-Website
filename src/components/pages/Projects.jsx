@@ -1,6 +1,7 @@
 import './projects.css'
 import TheRamenCritique from '../projects/TheRamenCritique'
 import TheWatchStore from '../projects/TheWatchStore'
+import PersonalWebsite from '../projects/PersonalWebiste'
 
 function Projects() {
 
@@ -9,6 +10,7 @@ function Projects() {
       <div className='projects__container'>
         <TheRamenCritique />
         <TheWatchStore />
+        <PersonalWebsite />
       </div>
     </>
   )

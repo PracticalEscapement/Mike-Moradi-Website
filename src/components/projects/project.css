@@ -52,7 +52,8 @@
 
 .project__heading,
 .project__heading--watch,
-.project__heading--ramen {
+.project__heading--ramen,
+.project__heading--person {
   font-family: 'Fascinate Inline';
   font-size: 3em;
   display: flex;
@@ -65,18 +66,27 @@
 }
 
 .project__heading--ramen {
-  padding-left: 4%;
+  padding-left: 5%;
+}
+
+.project__heading--person {
+  padding-left: 5%;
 }
 
 .project__img,
 .project__img--watch,
-.project__img--ramen {
+.project__img--ramen,
+.project__img--person {
   padding-left: 1vw;
   max-width: 100%;
   max-height: 40vh;
   transform: scale(1.7);
   margin-bottom: 9%;
   object-fit: contain;
+}
+
+.project__img--person {
+  margin-top: 2vh;
 }
 
 
