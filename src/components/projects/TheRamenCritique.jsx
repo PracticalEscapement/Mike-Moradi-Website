@@ -1,4 +1,4 @@
-import './theRamenCritique.css'
+import './project.css'
 import { useState } from 'react'
 import Ramen from '../../assests/ramen.png'
 import { IoLogoJavascript } from "react-icons/io";
@@ -36,19 +36,19 @@ function TheRamenCritique() {
     <>
         <div className='project'>
           {!buttonsClicked &&
-              <div className="pb--heading">
-                <img className='ramen__img' src={Ramen} alt='ramen' />
-                <h2 className='ramen__heading'>THE<br/>RAMEN<br/>CRITIQUE</h2>
-                <div className="btn__container">
+              <div className='project__overview'>
+                <img className='project__img--ramen' src={Ramen} alt='ramen' />
+                <h2 className='project__heading--ramen'>THE<br/>RAMEN<br/>CRITIQUE</h2>
+                <div className='btn__container'>
                   <div className='btn btn__description' onClick={() => handleButtonState('info')}>Info</div>
                   <div className='btn btn__description' onClick={() => handleButtonState('code')}>Code</div>
                 </div>
               </div>
           }
             {infoButtonClicked &&
-                <div className="pb--body">
+                <div className='project__description-card'>
                   <FaTimes className='btn btn__close' onClick={() => handleButtonState('close')} />
-                  <p>
+                  <p className='project__description'>
                     This is a blog designed to rate many of the ramaen restaurants in New York.
                     Authorized users can comment on posts made by the admin user.
                     This application features a backend API built using Ruby on Rails,
@@ -58,9 +58,9 @@ function TheRamenCritique() {
                 </div>
             }
             {codeButtonClicked &&
-                <div className="pb--tech">
+                <div className='project__tech-stack'>
                   <FaTimes className='btn btn__close' onClick={() => handleButtonState('close')} />
-                  <div className="tech">
+                  <div className='tech-icons'>
                     <IoLogoJavascript className='tech__icon' />
                     <DiRuby className='tech__icon' />
                     <SiRubyonrails className='tech__icon' />

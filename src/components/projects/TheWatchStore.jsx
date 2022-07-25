@@ -1,5 +1,5 @@
 import Watch from '../../assests/watch.png'
-import './theWatchStore.css'
+import './project.css'
 import { useState } from 'react'
 import { SiRubyonrails } from "react-icons/si";
 import { DiRuby } from "react-icons/di";
@@ -32,7 +32,7 @@ function TheWatchStore() {
     <>
       <div className='project'>
         {!buttonsClicked &&
-              <div className="pb--heading">
+              <div className="project__overview">
                 <img className='project__img--watch' src={Watch} alt='Watch' />
                 <h2 className='project__heading--watch'>THE<br/>Watch<br/>Store</h2>
                 <div className="btn__container">
@@ -42,18 +42,18 @@ function TheWatchStore() {
               </div>
         }
         {infoButtonClicked &&
-            <div className="pb--body">
+            <div className='project__description-card'>
               <FaTimes className='btn btn__close' onClick={() => handleButtonState('close')} />
-              <p>
+              <p className='project__description'>
                 The Watch Store as the name impies, is an ecommerce store designed to sell watches. Features of this Ruby on Rails application include,
                  Stripe checkout, TaxJar tax caluculation, user authentication with Devise, and RESTful design.
               </p>
             </div>
         }
         {codeButtonClicked &&
-            <div className="pb--tech">
+            <div className='project__tech-stack'>
               <FaTimes className='btn btn__close' onClick={() => handleButtonState('close')} />
-              <div className="tech">
+              <div className='tech-icons'>
                 <DiRuby className='tech__icon' />
                 <SiRubyonrails className='tech__icon' />
               </div>

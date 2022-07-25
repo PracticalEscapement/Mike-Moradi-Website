@@ -13,6 +13,7 @@
   position: relative;
   align-items: center;
   gap: 5vh;
+  padding-bottom: 5vh;
   overflow: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
