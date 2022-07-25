@@ -9,9 +9,10 @@
   width: var(--project-page-width);
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
-  justify-content: center;
+  align-items: center;
+  gap: 5vh;
   overflow: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */

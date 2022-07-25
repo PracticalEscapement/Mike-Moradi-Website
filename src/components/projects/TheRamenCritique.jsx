@@ -36,7 +36,6 @@ function TheRamenCritique() {
     <>
         <div className='project'>
           {!buttonsClicked &&
-            <div className='project__element'>
               <div className="pb--heading">
                 <img className='ramen__img' src={Ramen} alt='ramen' />
                 <h2 className='ramen__heading'>THE<br/>RAMEN<br/>CRITIQUE</h2>
@@ -45,10 +44,8 @@ function TheRamenCritique() {
                   <div className='btn btn__description' onClick={() => handleButtonState('code')}>Code</div>
                 </div>
               </div>
-            </div>
           }
             {infoButtonClicked &&
-              <div className='project__element'>
                 <div className="pb--body">
                   <FaTimes className='btn btn__close' onClick={() => handleButtonState('close')} />
                   <p>
@@ -59,10 +56,8 @@ function TheRamenCritique() {
                     were used to create the UI.
                   </p>
                 </div>
-              </div>
             }
             {codeButtonClicked &&
-              <div className='project__element'>
                 <div className="pb--tech">
                   <FaTimes className='btn btn__close' onClick={() => handleButtonState('close')} />
                   <div className="tech">
@@ -79,7 +74,6 @@ function TheRamenCritique() {
                     </div>
                   </div>
                 </div>
-              </div>
             }
           
 
