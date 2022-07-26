@@ -6,7 +6,7 @@ function Resume() {
   return (
     <>
       <div className='resume-container'>
-        <a href = {PDF} target = "_blank">
+        <a href={PDF} target='_blank' rel='noreferrer'>
           <div className='resume-pdf__container'>
             <div className='resume-pdf__img--container'>
               <img className='resume-pdf__img' src={myResume} alt='Resume-img'/>
