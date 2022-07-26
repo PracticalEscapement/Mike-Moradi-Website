@@ -35,7 +35,7 @@ function PersonalWebiste() {
         {!buttonsClicked &&
           <div className="project__overview">
             <img className='project__img--person' src={Person} alt='Watch' />
-            <h2 className='project__heading--person'>THE<br/>Watch<br/>Store</h2>
+            <h2 className='project__heading--person'>Personal<br/>Website</h2>
             <div className="btn__container">
               <div className='btn btn__description' onClick={() => handleButtonState('info')}>Info</div>
               <div className='btn btn__description' onClick={() => handleButtonState('code')}>Code</div>
