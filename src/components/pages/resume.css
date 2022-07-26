@@ -1,0 +1,46 @@
+:root {
+  --project-page-width: calc(100% - 12.5vw);
+}
+
+.resume-container {
+  width: var(--project-page-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-pdf__container {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #ccc;
+  background-color: #EEF0F2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+  cursor: pointer;
+}
+
+.resume-pdf__container:hover {
+  transform: scale(1.2);
+}
+
+.resume-pdf__img--container {
+  margin-top: 3vh;
+  max-width: 25vh;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-pdf__img {
+  transform: scale(.9);
+}
+
+.resume-pdf__heading {
+  font-size: 2.7em;
+  display: flex;
+  align-items: center;
+}
