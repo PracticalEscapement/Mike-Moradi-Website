@@ -1,9 +1,9 @@
-import Card from '../card/Card'
+import ContactForm from "../Forms/ContactForm"
 
 function Contact() {
   return (
     <>
-      <Card text={'Contact Page'} />
+      <ContactForm />
     </>
   )
 }
