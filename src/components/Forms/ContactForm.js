@@ -6,12 +6,12 @@ function ContactForm() {
   return (
       <form 
         className="name-label"
-        name="contact-v1" 
+        name="contact v1" 
         method="post" 
         data-netlify="true" 
         onSubmit="submit"
       >
-        <input type="hidden" name="form-name" value="contact-v1" />
+        <input type="hidden" name="form-name" value="contact v1" />
 
         <div>
           <label>First Name <br />
