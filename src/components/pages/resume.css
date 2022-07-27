@@ -11,8 +11,8 @@
 }
 
 .resume-pdf__container {
-  width: 25vw;
-  height: 25vw;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   box-shadow: 0 0 50px #ccc;
   background-color: #EEF0F2;
@@ -43,4 +43,19 @@
   font-size: 2.7em;
   display: flex;
   align-items: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .resume-container {
+    width: 100%;
+  }
+  
+  .resume-pdf__container {
+    transform: scale(.7);
+  }
+
+  .resume-pdf__container:hover {
+    transform: scale(.8);
+  }
 }
