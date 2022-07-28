@@ -11,7 +11,7 @@ function Resume() {
             <div className='resume-pdf__img--container'>
               <img className='resume-pdf__img' src={myResume} alt='Resume-img'/>
             </div>
-              <h2 className='resume-pdf__heading'>Click To<br/>View PDF</h2>
+            <h2 className='resume-pdf__heading'>Click To<br/>View PDF</h2>
           </div>
         </a>
       </div>

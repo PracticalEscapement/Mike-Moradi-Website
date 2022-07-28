@@ -7,41 +7,48 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
 
 .resume-pdf__container {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  box-shadow: 0 0 50px #ccc;
+  max-width: 50vw;
+  height: 40vh;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-color: #EEF0F2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'img heading';
   position: relative;
-  display: flex;
-  justify-content: center;
   margin-top: 15vh;
   cursor: pointer;
 }
 
 .resume-pdf__container:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .resume-pdf__img--container {
+  position: relative;
   margin-top: 3vh;
   max-width: 25vh;
   height: 40vh;
+  grid-area: img;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .resume-pdf__img {
-  transform: scale(.9);
+  transform: scale(.5);
+  padding-bottom: 10vh;
+  object-fit: contain;
 }
 
 .resume-pdf__heading {
-  font-size: 2.7em;
+  grid-area: heading;
+  font-size: 3em;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -52,10 +59,43 @@
   }
   
   .resume-pdf__container {
+    max-width: 60vw;
     transform: scale(.7);
   }
 
   .resume-pdf__container:hover {
     transform: scale(.8);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .resume-container {
+    width: 100%;
+  }
+
+  .resume-pdf__container {
+    max-width: 90vw;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .resume-pdf__img--container {
+    max-width: none;
+  }
+
+  .resume-pdf__img {
+    transform: scale(.6);
+    padding-bottom: 0;
+  }
+  
+}
+
+@media screen and (max-width: 450px) {
+  .resume-pdf__img {
+    transform: scale(.4);
+    padding-bottom: 0;
   }
 }
