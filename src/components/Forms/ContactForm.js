@@ -4,36 +4,54 @@ function ContactForm() {
 
 
   return (
-      <form 
-        className="name-label"
-        name="contact-v1" 
-        method="post" 
-        data-netlify="true" 
-        onSubmit="submit"
-      >
-        <input type="hidden" name="form-name" value="contact-v1" />
+    <div className="contact-page__container">
+      <div className="contact-form__container">
+        <form 
+          className="contact-form"
+          name="contact-v2" 
+          method="post" 
+          data-netlify="true" 
+          onSubmit="submit"
+        >
+          <input type="hidden" name="form-name" value="contact-v2" />
 
-        <div>
-          <label>Name <br />
-            <input type="text" name="name" />
-          </label>
-        </div>
+          <div className="contact-form__input-container--left">
 
-        <div>
-          <label>Email <br />
-            <input type="text" name="email" />
-          </label>
-        </div>
+            <div className="contact-form__input">
+              <label className="contact-form__input--label">Name <br />
+                <input className="contact-form__input--text" type="text" name="name" />
+              </label>
+            </div>
 
-        <div>
-          <label>Message <br />
-            <textarea name="message"></textarea>
-          </label>
-        </div>
+            <div className="contact-form__input">
+              <label className="contact-form__input--label">Email <br />
+                <input className="contact-form__input--text" type="text" name="email" />
+              </label>
+            </div>
 
-        <button type="submit">Send</button>
+            <div className="contact-form__input">
+              <label className="contact-form__input--label">Company <br />
+                <input className="contact-form__input--text" type="text" name="company" />
+              </label>
+            </div>
 
-      </form>
+          </div>
+
+          <div className="contact-form__input-container--right">
+            <div className="contact-form__input">
+              <label className="contact-form__input--label">Message <br />
+                <textarea className="contact-form__input--textarea" name="message"></textarea>
+              </label>
+            </div>
+
+            <div className="contact-form-btn__container">
+              <button className="contact-form-btn__container--submit" type="submit">Send</button>
+            </div>
+          
+          </div>
+        </form>
+      </div>
+    </div>
   )
 }
 
