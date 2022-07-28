@@ -93,7 +93,8 @@
 .page-label-text-active {
   color: black;
   font-size: 5em;
-  margin: 0;
+  margin-top: .5%;
+  margin-left: 1%;
   position: absolute;
   transform: rotate(0deg);
 }
@@ -206,7 +207,7 @@ only screen and (max-width: 768px) {
   .menu-color-dark,
   .menu-color-light,
   .menu-button {
-    position: fixed;
+    position: absolute;
     display: block;
     top: 0;
     right: 0;
