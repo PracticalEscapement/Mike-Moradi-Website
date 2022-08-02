@@ -9,8 +9,8 @@ function Projects() {
     <>
       <div className='projects__container'>
         <TheRamenCritique />
-        <TheWatchStore />
         <PersonalWebsite />
+        <TheWatchStore />
       </div>
     </>
   )

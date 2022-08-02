@@ -120,6 +120,7 @@
 
 .code__links {
   display: flex;
+  font-size: 1.5em;
   gap: 1vw;
   padding-bottom: 5%;
   position: absolute;
