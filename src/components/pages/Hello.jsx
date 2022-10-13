@@ -1,5 +1,4 @@
 import './hello.css'
-import headShot from '../../assests/snap-shot.png'
 
 function Hello() {
   return (
