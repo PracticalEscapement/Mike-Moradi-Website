@@ -5,9 +5,6 @@ function Hello() {
   return (
     <>
       <div className='page-container'>
-        <div className='mug-shot'>
-          <img src={headShot} alt='My Beautiful Face' />
-        </div>
         <div className='greeting-container'>
           <div className='greeting'>
             <h1>Hello, I'm Mike.</h1>

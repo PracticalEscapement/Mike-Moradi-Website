@@ -2,6 +2,7 @@
   width: calc(100vw - 200px);
   display: flex;
   flex-direction: row;
+  justify-content: center;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -10,29 +11,11 @@
   display: none;
 }
 
-.mug-shot {
-  width: 50%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30%;
-}
-
-.mug-shot img {
-  padding-bottom: 3vh;
-  position: absolute;
-  transform: scale(1);
-  width: 100%;
-  object-fit: contain;
-  z-index: 10;
-}
-
 .greeting-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding-top: 27vh;
-  margin-left: -9vw;
+
   align-items: center;
   position: relative;
   width: 50%;
