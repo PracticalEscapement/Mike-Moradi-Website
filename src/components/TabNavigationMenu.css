@@ -7,9 +7,9 @@
   --tab-page-color-5: #353B3C;
 
   --tab-text-color-1: black;
-  --tab-text-color-2: white;
-  --tab-text-color-3: white;
-  --tab-text-color-4: white;
+  --tab-text-color-2: black;
+  --tab-text-color-3: black;
+  --tab-text-color-4: black;
   --tab-text-color-5: black;
 }
 
@@ -201,19 +201,24 @@ only screen and (max-width: 768px) {
   }
   
   .page-label-text-light {
-    color: #BEBEBE;
+    color:  #141414;
+  }
+
+  .menu-button__container {
+    padding: 7%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .menu-color-dark,
   .menu-color-light,
   .menu-button {
-    position: absolute;
     display: block;
-    top: 0;
-    right: 0;
-    z-index: 100;
+    position: relative;
+    z-index: 20;
     font-size: 50px;
-    margin: 7%;
     cursor: pointer;
     transition-delay: 500ms;
     
@@ -228,7 +233,13 @@ only screen and (max-width: 768px) {
   }
 
   .menu-color-light {
-    color: #BEBEBE;
+    color: #141414;
+  }
+
+  @media screen and (max-width: 450px) {
+    .page-label-text-active {
+      margin-left: 5vw;
+    }
   }
 
 }

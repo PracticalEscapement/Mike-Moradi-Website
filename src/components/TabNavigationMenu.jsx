@@ -53,7 +53,9 @@ function TabNavigationMenu({ pageRoute }) {
   return (
     <>
       <div className='page-container'>
-        <FaBars className={menuOpen ? 'menu-button-clicked' : `menu-button ${menuColor}`} onClick={menuClicked} />
+        <div className='menu-button__container'>
+          <FaBars className={menuOpen ? 'menu-button-clicked' : `menu-button ${menuColor}`} onClick={menuClicked} />
+        </div>
         <div
           className={pageOne ? 'page-1 page-active' : 'page-1'}
           onClick={() => handlePageChange('PAGE1', '/')}

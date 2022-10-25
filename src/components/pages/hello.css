@@ -22,12 +22,30 @@
   z-index: 20;
 }
 
-.greeting h1 {
-  font-size: 4vw;
+.greeting {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
-.greeting h2 {
-  font-size: 2.5vw;
+.name {
+  font-size: 5vw;
+}
+
+.title {
+  font-size: 4vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .name {
+    font-size: 6rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
 }
 
 @media (pointer: coarse) and (hover: none),
@@ -62,12 +80,11 @@ only screen and (max-width: 768px) {
     z-index: 20;
   }
 
-  .greeting h1 {
-    font-size: 8vw;
-  }
-  
-  .greeting h2 {
-    font-size: 5vw;
+  .name {
+    font-size: 12vw;
   }
 
+  .title {
+    font-size: 8vw;
+  }
 }
