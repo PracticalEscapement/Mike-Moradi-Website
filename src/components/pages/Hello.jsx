@@ -6,8 +6,8 @@ function Hello() {
       <div className='page-container'>
         <div className='greeting-container'>
           <div className='greeting'>
-            <h1>Hello, I'm Mike.</h1>
-            <h2>Software Developer</h2>
+            <h1 className='name'>Michael Moradi</h1>
+            <h2 className='title'>Software Developer</h2>
           </div>
         </div>
       </div>
