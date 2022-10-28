@@ -30,7 +30,7 @@
 .resume-pdf__img--container {
   position: relative;
   margin-top: 3vh;
-  max-width: 25vh;
+  max-width: 15vw;
   height: 40vh;
   grid-area: img;
   display: flex;
@@ -39,7 +39,7 @@
 }
 
 .resume-pdf__img {
-  transform: scale(.5);
+  width: 100%;
   padding-bottom: 10vh;
   object-fit: contain;
 }
@@ -85,17 +85,8 @@
   .resume-pdf__img--container {
     max-width: none;
   }
-
-  .resume-pdf__img {
-    transform: scale(.6);
-    padding-bottom: 0;
-  }
   
 }
 
 @media screen and (max-width: 450px) {
-  .resume-pdf__img {
-    transform: scale(.4);
-    padding-bottom: 0;
-  }
 }

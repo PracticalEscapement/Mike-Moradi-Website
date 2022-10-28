@@ -5,12 +5,6 @@
   --tab-page-color-3: #A2999E;
   --tab-page-color-4: #846A6A;
   --tab-page-color-5: #353B3C;
-
-  --tab-text-color-1: black;
-  --tab-text-color-2: black;
-  --tab-text-color-3: black;
-  --tab-text-color-4: black;
-  --tab-text-color-5: black;
 }
 
 .page-container {
@@ -81,9 +75,9 @@
 
 .page-label-text {
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   color: black;
-  margin-left: 1.1em;
+  margin-left: 1vw;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -92,20 +86,14 @@
 
 .page-label-text-active {
   color: black;
-  font-size: 5em;
+  font-size: 4rem;
   margin-top: .5%;
   margin-left: 1%;
   position: absolute;
   transform: rotate(0deg);
 }
 
-.page-label-text-dark {
-  color: var(--tab-text-color-1);
-}
 
-.page-label-text-light {
-  color: var(--tab-text-color-2);
-}
 
 .menu-button {
   display: none;
@@ -181,7 +169,8 @@ only screen and (max-width: 768px) {
   }
   
   .page-label-text {
-    color: red;
+    color: black;
+    font-size: 1.8rem;
     margin: 0;
     position: absolute;
     top: 10%;
@@ -237,7 +226,11 @@ only screen and (max-width: 768px) {
   }
 
   @media screen and (max-width: 450px) {
+    .page-container {
+      overflow: hidden;
+    }
     .page-label-text-active {
+      font-size: 4rem;
       margin-left: 5vw;
     }
   }
