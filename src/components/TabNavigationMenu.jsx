@@ -12,7 +12,7 @@ import About from './pages/About'
 
 function TabNavigationMenu({ pageRoute }) {
 
-  const { dispatch, pages, pageLabels, menuColor } = useContext(TabNavigationContext)
+  const { dispatch, pages, pageLabels } = useContext(TabNavigationContext)
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
@@ -54,14 +54,14 @@ function TabNavigationMenu({ pageRoute }) {
     <>
       <div className='page-container'>
         <div className='menu-button__container'>
-          <FaBars className={menuOpen ? 'menu-button-clicked' : `menu-button ${menuColor}`} onClick={menuClicked} />
+          <FaBars className={menuOpen ? 'menu-button-clicked' : 'menu-button'} onClick={menuClicked} />
         </div>
         <div
           className={pageOne ? 'page-1 page-active' : 'page-1'}
           onClick={() => handlePageChange('PAGE1', '/')}
         >
           <div className={pageOneActive ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageOneActive ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
+            <h3 className={pageOneActive ? 'page-label-text-active' : 'page-label-text'}>
               Hello
             </h3>
             {pageOneActive &&
@@ -74,7 +74,7 @@ function TabNavigationMenu({ pageRoute }) {
           onClick={() => handlePageChange('PAGE2', '/projects')}
         >
           <div className={pageTwoActive ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageTwoActive ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
+            <h3 className={pageTwoActive ? 'page-label-text-active' : 'page-label-text'}>
               Projects
             </h3>
           </div>
@@ -87,7 +87,7 @@ function TabNavigationMenu({ pageRoute }) {
           onClick={() => handlePageChange('PAGE3', '/resume')}
         >
           <div className={pageThreeActive ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageThreeActive ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
+            <h3 className={pageThreeActive ? 'page-label-text-active' : 'page-label-text'}>
               Resume
             </h3>
             {pageThreeActive &&
@@ -100,7 +100,7 @@ function TabNavigationMenu({ pageRoute }) {
           onClick={() => handlePageChange('PAGE4', '/contact')}
         > 
           <div className={pageFourActive ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageFourActive ? 'page-label-text-active page-label-text-light' : 'page-label-text page-label-text-light'}>
+            <h3 className={pageFourActive ? 'page-label-text-active' : 'page-label-text'}>
               Contact
             </h3>
             {pageFourActive && 
@@ -113,7 +113,7 @@ function TabNavigationMenu({ pageRoute }) {
           onClick={() => handlePageChange('PAGE5', '/about')}
         > 
           <div className={pageFiveActive ? 'page-label-active' : 'page-label'}>
-            <h3 className={pageFiveActive ? 'page-label-text-active page-label-text-dark' : 'page-label-text page-label-text-dark'}>
+            <h3 className={pageFiveActive ? 'page-label-text-active' : 'page-label-text'}>
               About
             </h3>
             {pageFiveActive &&

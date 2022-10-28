@@ -3,7 +3,6 @@ const TabNavigationReducer = (state, action) => {
     case 'PAGE1':
       return {
         ...state,
-        menuColor: 'menu-color-dark',
         pages: {
           page1: true,
           page2: false,
@@ -22,7 +21,6 @@ const TabNavigationReducer = (state, action) => {
     case 'PAGE2':
       return {
         ...state,
-        menuColor: 'menu-color-light',
         pages: {
           page1: true,
           page2: true,
@@ -41,7 +39,6 @@ const TabNavigationReducer = (state, action) => {
     case 'PAGE3':
       return {
         ...state,
-        menuColor: 'menu-color-light',
         pages: {
           page1: true,
           page2: true,
@@ -79,7 +76,6 @@ const TabNavigationReducer = (state, action) => {
     case 'PAGE5':
       return {
         ...state,
-        menuColor: 'menu-color-dark',
         pages: {
           page1: true,
           page2: true,
