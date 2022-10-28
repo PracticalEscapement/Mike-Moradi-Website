@@ -29,13 +29,9 @@
 
 .resume-pdf__img--container {
   position: relative;
-  margin-top: 3vh;
   max-width: 15vw;
   height: 40vh;
   grid-area: img;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .resume-pdf__img {
@@ -86,7 +82,4 @@
     max-width: none;
   }
   
-}
-
-@media screen and (max-width: 450px) {
 }
