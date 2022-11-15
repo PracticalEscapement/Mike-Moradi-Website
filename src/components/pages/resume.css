@@ -4,14 +4,15 @@
 
 .resume-container {
   width: var(--project-page-width);
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 .resume-pdf__container {
-  max-width: 50vw;
-  height: 40vh;
+  width: 50vw;
+  height: 50vh;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-color: #EEF0F2;
@@ -28,21 +29,20 @@
 }
 
 .resume-pdf__img--container {
-  position: relative;
-  max-width: 15vw;
-  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: img;
 }
 
 .resume-pdf__img {
   width: 100%;
-  padding-bottom: 10vh;
   object-fit: contain;
 }
 
 .resume-pdf__heading {
   grid-area: heading;
-  font-size: 3em;
+  font-size: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +55,8 @@
   }
   
   .resume-pdf__container {
-    max-width: 60vw;
+    width: 80vw;
+    margin-top: 10vh;
     transform: scale(.7);
   }
 
@@ -67,19 +68,43 @@
 @media screen and (max-width: 750px) {
   .resume-container {
     width: 100%;
+    height: 100%;
+    position: relative;
   }
 
   .resume-pdf__container {
-    max-width: 90vw;
+    width: 90vw;
     height: auto;
-    padding: 2%;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
   }
 
   .resume-pdf__img--container {
-    max-width: none;
+    width: 100%;
   }
-  
+
+  .resume-pdf__img {
+    position: relative;
+    transform: scale(1)
+  }
+
+  .resume-pdf__heading {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .resume-pdf__container {
+    margin-top: 10;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .resume-pdf__img {
+    transform: scale(1)
+  }
 }
