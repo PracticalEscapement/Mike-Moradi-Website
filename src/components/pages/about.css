@@ -25,6 +25,16 @@
   text-align: center;
 }
 
+@media screen and (max-width: 750px) {
+  .about__container {
+    width: 100%;
+  }
+
+  .about__card {
+    max-width: 80vw;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .about__container {
     width: 100%;
