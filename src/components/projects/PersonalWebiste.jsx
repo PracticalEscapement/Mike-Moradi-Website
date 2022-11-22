@@ -8,6 +8,7 @@ import { FaTimes } from "react-icons/fa";
 function PersonalWebiste() {
   const [codeButtonClicked, setCodeButtonClicked] = useState(false)
   const [infoButtonClicked, setinfoButtonClicked] = useState(false)
+  const [titleButtonClicked, setTitleButtonClicked] = useState(false)
   const [buttonsClicked, setButtonsClicked] = useState(false)
 
   const handleButtonState = (btn) => {
@@ -16,12 +17,20 @@ function PersonalWebiste() {
       setCodeButtonClicked(false)
       setButtonsClicked(false)
     }
+    if (btn === 'title') {
+      setTitleButtonClicked(true)
+      setinfoButtonClicked(false)
+      setCodeButtonClicked(false)
+      setButtonsClicked(true)
+    }
     if (btn === 'info') {
+      setTitleButtonClicked(false)
       setinfoButtonClicked(true)
       setCodeButtonClicked(false)
       setButtonsClicked(true)
     }
     if (btn === 'code') {
+      setTitleButtonClicked(false)
       setinfoButtonClicked(false)
       setCodeButtonClicked(true)
       setButtonsClicked(true)
@@ -56,8 +65,8 @@ function PersonalWebiste() {
           <div className='project__tech-stack'>
             <FaTimes className='btn btn__close' onClick={() => handleButtonState('close')} />
             <div className='tech-icons'>
-            <IoLogoJavascript className='tech__icon' />
-            <DiReact className='tech__icon' />
+              <IoLogoJavascript className='tech__icon' />
+              <DiReact className='tech__icon' />
             </div>
             <div className="code">
               <h4>Check Out My Code</h4>
