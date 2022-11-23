@@ -56,6 +56,7 @@
 }
 
 .project__title {
+  height: 100%;
   grid-area: display;
   display: flex;
   justify-content: center;
@@ -64,6 +65,7 @@
 }
 
 .project__info {
+  height: 100%;
   padding-left: 5%;
   padding-right: 5%;
   grid-area: display;
