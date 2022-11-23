@@ -1,6 +1,6 @@
 import myResume from '../../assests/resume-image.png'
 import './resume.css'
-import PDF from '../../assests/michael-moradi-resume-v4.pdf'
+import PDF from '../../assests/resume-v5.pdf'
 
 function Resume() {
   return (
