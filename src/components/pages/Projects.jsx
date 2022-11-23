@@ -1,8 +1,5 @@
 import './projects.css'
 import Project from '../projects/Project'
-import TheRamenCritique from '../projects/TheRamenCritique'
-import TheWatchStore from '../projects/TheWatchStore'
-import PersonalWebsite from '../projects/PersonalWebiste'
 
 function Projects() {
 
