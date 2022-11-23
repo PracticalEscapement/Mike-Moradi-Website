@@ -1,8 +1,5 @@
 import './project.css'
 import { useState } from 'react'
-import { IoLogoJavascript } from "react-icons/io";
-import { DiReact } from "react-icons/di";
-import { FaTimes } from "react-icons/fa";
 
 const Project = () => {
   const [titleButtonClicked, setTitleButtonClicked] = useState(true)
