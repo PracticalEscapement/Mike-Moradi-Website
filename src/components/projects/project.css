@@ -1,195 +1,85 @@
-.project {
-  padding-top: 15vh;
-  max-width: 60vw;
-  height: auto;
+
+
+.project__card {
+  width: 65vw;
+  height: 30vh;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas: "display nav";
+  grid-template-columns: 85% 15%;
+}
+
+.project__nav {
+  grid-area: nav;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.project__overview {
-  display: flex;
+.project__nav-tabs--top,
+.project__nav-tabs--bottom,
+.project__nav-tabs {
   width: 100%;
-  position: relative;
+  height: 100%;
+
 }
 
-.project__description-card {
+.project__nav-tabs--top {
+  border-radius: 0 10px 0 0
+}
+
+.project__nav-tabs--bottom {
+  border-radius: 0 0 10px 0
+}
+
+
+.project__nav-tabs:hover,
+.project__nav-tabs--top:hover,
+.project__nav-tabs--bottom:hover {
+  background-color:  #846A6A;
+}
+
+.tab__active {
+  background-color: #846A6A;
+}
+
+.project__nav-tabs--icon {
   width: 100%;
-  max-height: 25vh;
-  z-index: 20;
-  background-color: #EEF0F2;
-  border-radius: 15px;
-  height: auto;
-  box-shadow: 4px 4px 2px #A2999E;
-  z-index: 20;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.project__title {
+  grid-area: display;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem
+}
+
+.project__info {
+  padding-left: 5%;
+  padding-right: 5%;
+  grid-area: display;
+  display: flex;
+  justify-content: center;
   overflow: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.project__description-card::-webkit-scrollbar {
-  display: none; /* chrome and safarai */
+
+.project__info::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
-.project__description {
-  font-size: 2em;
-  font-family: 'Antic Slab', serif;
-  padding-left: 3vw;
-  padding-right: 3vw;
+.project__info--text {
+  font-size: 3rem;
+  text-align: center;
 }
 
-.project__tech-stack {
-  min-width: 40vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: 20;
-  height: auto;
-  padding: 2% 2% 0 2%;
-  background-color: #EEF0F2;
-  border-radius: 15px;
-  box-shadow: 4px 4px 2px #A2999E;
-}
-
-
-.project__heading,
-.project__heading--watch,
-.project__heading--ramen,
-.project__heading--person {
-  font-family: 'Fascinate Inline';
-  font-size: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.project__heading--watch {
-  padding-left: 10%;
-}
-
-.project__heading--ramen {
-  padding-left: 5%;
-}
-
-.project__heading--person {
-  padding-left: 5%;
-}
-
-.project__img,
-.project__img--watch,
-.project__img--ramen,
-.project__img--person {
-  padding-left: 1vw;
-  max-width: 100%;
-  max-height: 40vh;
-  transform: scale(1.7);
-  margin-bottom: 9%;
-  object-fit: contain;
-}
-
-.project__img--person {
-  margin-top: 2vh;
-}
-
-
-/* section for custom tech icons */
-
-.tech-icons {
-  padding: 1vw;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.tech__icon {
-  font-size: 5vw;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 2%;
-  box-shadow: 4px 4px 2px #A2999E;
-}
-
-.code {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.code h4 {
-  font-size: 2vw;
-}
-
-.code__links {
-  display: flex;
-  font-size: 1.5em;
-  gap: 1vw;
-  padding-bottom: 5%;
-  position: absolute;
-}
-
-.code__links a {
-  display: inline-block;
-  position: relative;
-  font-size: 1.3em;
-  color: black;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.code__links a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.code__links a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* buttons */
-
-.btn__container {
-  padding-top: 2vh;
-  padding-left: 1vw;
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
-}
-
-.btn {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn:hover {
-  background-color: black;
-  color: white;
-}
-
-.btn__description {
-  background-color: #EEF0F2;
-  font-size: 1.2em;
-  border-radius: 50%;
-  width: 4em;
-  height: 4em;
-  transition-duration: 1s;
-  
-}
-
-.btn__close {
-  font-size: 2em;
-  position: absolute;
-  border-radius: 50%;
-  padding: 2px;
-  margin-left: 0.5%;
-  margin-top: 0.5%;
-}

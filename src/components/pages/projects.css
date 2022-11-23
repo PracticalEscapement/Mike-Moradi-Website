@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 
 .projects__container {
+  margin-top: 15vh;
   width: var(--project-page-width);
   height: 100vh;
   display: flex;
