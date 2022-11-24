@@ -23,3 +23,8 @@
   display: none; /* chrome and safarai */
 }
 
+@media screen and (max-width: 450px) {
+  .projects__container {
+    width: 100%;
+  }
+}

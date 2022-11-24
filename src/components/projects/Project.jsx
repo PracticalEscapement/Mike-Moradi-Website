@@ -43,21 +43,21 @@ const Project = () => {
         }
         {codeButtonClicked &&
           <div className="project__title">
-            <h1>Links to code repos will go here</h1>
+            <p>Links to repos go here.</p>
           </div>
         }
         <div className="project__nav">
-          <div className={titleButtonClicked ? "project__nav-tabs--top tab__active" : "project__nav-tabs--top"} onClick={() => handleButtonState('title')}>
+          <div className={titleButtonClicked ? "project__nav-tabs--title tab__active" : "project__nav-tabs--title"} onClick={() => handleButtonState('title')}>
             <div className="project__nav-tabs--icon">
               Title
             </div>
           </div>
-          <div className={infoButtonClicked ? "project__nav-tabs tab__active" : "project__nav-tabs"} onClick={() => handleButtonState('info')}>
+          <div className={infoButtonClicked ? "project__nav-tabs--info tab__active" : "project__nav-tabs--info"} onClick={() => handleButtonState('info')}>
             <div className="project__nav-tabs--icon">
               Info
             </div>
           </div>
-          <div className={codeButtonClicked ? "project__nav-tabs--bottom tab__active" : "project__nav-tabs--bottom"} onClick={() => handleButtonState('code')}>
+          <div className={codeButtonClicked ? "project__nav-tabs--code tab__active" : "project__nav-tabs--code"} onClick={() => handleButtonState('code')}>
             <div className="project__nav-tabs--icon">
               Code
             </div>
