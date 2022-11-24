@@ -19,19 +19,18 @@
   justify-content: center;
 }
 
-.project__nav-tabs--top,
-.project__nav-tabs--bottom,
-.project__nav-tabs {
+.project__nav-tabs--title,
+.project__nav-tabs--info,
+.project__nav-tabs--code {
   width: 100%;
   height: 100%;
-
 }
 
-.project__nav-tabs--top {
+.project__nav-tabs--title {
   border-radius: 0 10px 0 0
 }
 
-.project__nav-tabs--bottom {
+.project__nav-tabs--code {
   border-radius: 0 0 10px 0
 }
 
@@ -85,3 +84,42 @@
   text-align: center;
 }
 
+@media screen and (max-width: 450px) {
+  .project__card {
+    width: 90vw;
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "nav"
+                         "display";
+    grid-template-rows: 5vh auto;
+    grid-template-columns: 100%;
+  }
+
+  .project__nav {
+    position: fixed;
+    background-color: aliceblue;
+    border-radius: 10px;
+    z-index: 20;
+    width: 90vw;
+    height: 10vh;
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project__nav-tabs--title {
+    border-radius: 10px 0 0 0
+  }
+  
+  .project__nav-tabs--code {
+    border-radius: 0 10px 0 0
+  }
+
+  .project__info,
+  .project__title {
+    z-index: 10;
+  }
+
+}
