@@ -29,15 +29,13 @@ const Project = () => {
       <div className="project__card">
         {titleButtonClicked &&
           <div className="project__title">
-            <h1>Some Cool Project</h1>
+            <h1>Currently building a backend for this.</h1>
           </div>
         }
         {infoButtonClicked &&
           <div className="project__info">
             <p className="project__info--text">
-              Single page React application designed to display frontend development skills (This Website).
-              Features of this app include custom components, a unique UI, and deployment with Netlify.
-              Blood, sweat, and tears are also found throughout this app :).
+             description of project.
             </p>
           </div>
         }
