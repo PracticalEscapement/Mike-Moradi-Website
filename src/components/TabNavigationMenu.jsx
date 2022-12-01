@@ -52,7 +52,7 @@ function TabNavigationMenu({ pageRoute }) {
 
   return (
     <>
-      <div className='container'>
+      <div className='page-container'>
         <div className='menu-button__container'>
           <FaBars className={menuOpen ? 'menu-button-clicked' : 'menu-button'} onClick={menuClicked} />
         </div>

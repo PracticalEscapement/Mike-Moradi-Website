@@ -60,10 +60,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem
+  font-size: 2rem;
 }
 
 .project__info {
+  margin-top: 10%;
   height: 100%;
   padding-left: 5%;
   padding-right: 5%;
@@ -84,7 +85,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .project__card {
     width: 90vw;
     height: 80vh;

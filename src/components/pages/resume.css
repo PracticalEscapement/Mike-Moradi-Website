@@ -42,7 +42,7 @@
 
 .resume-pdf__heading {
   grid-area: heading;
-  font-size: 3rem;
+  font-size: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +62,10 @@
 
   .resume-pdf__container:hover {
     transform: scale(.8);
+  }
+
+  .resume-pdf__heading {
+    font-size: 4rem;
   }
 }
 
