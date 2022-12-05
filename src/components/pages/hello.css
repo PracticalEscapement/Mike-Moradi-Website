@@ -17,7 +17,7 @@
   padding-top: 27vh;
   align-items: center;
   position: relative;
-  width: 50%;
+  width: 100%;
   z-index: 20;
 }
 
@@ -31,11 +31,11 @@
 }
 
 .name {
-  font-size: 5vw;
+  font-size: 7rem;
 }
 
 .title {
-  font-size: 4vh;
+  font-size: 4rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -69,12 +69,9 @@ only screen and (max-width: 768px) {
   }
 
   .greeting-container {
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 15vh;
     width: 100%;
     z-index: 20;
   }
