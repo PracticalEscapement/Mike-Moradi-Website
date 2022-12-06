@@ -18,6 +18,8 @@
 .page-4,
 .page-5,
 .page-active {
+  margin: 0;
+  padding: 0;
   position: fixed;
   height: 100%;
   width: 100vw;
@@ -60,11 +62,10 @@
 }
 
 .page-label {
-  position: absolute;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .page-label-active {
@@ -77,11 +78,8 @@
   cursor: pointer;
   font-size: 1.3rem;
   color: black;
-  margin-left: 1vw;
   position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateX(-30%) rotate(90deg);
 }
 
 .page-label-text-active {
@@ -165,7 +163,9 @@ only screen and (max-width: 768px) {
   .page-label {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   
   .page-label-text {
@@ -173,8 +173,6 @@ only screen and (max-width: 768px) {
     font-size: 1.8rem;
     margin: 0;
     position: absolute;
-    top: 10%;
-    -ms-transform: translateY(0%);
     transform: translateY(0%) rotate(0deg);
   }
 
