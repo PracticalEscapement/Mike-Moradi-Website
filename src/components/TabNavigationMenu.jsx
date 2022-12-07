@@ -50,6 +50,17 @@ function TabNavigationMenu({ pageRoute }) {
     localStorage.setItem("currentPage", JSON.stringify(pageRoute))
   }, [pageRoute, dispatch])
 
+  const handleTabTransitions = (id, e) => {
+    const element = document.getElementById(id)
+    if (e === 'over') {
+      element.classList.add('tab__hover')
+    }
+    if (e === 'out') {
+      element.classList.remove('tab__hover')
+    }
+  }
+
+
   return (
     <>
       <div className='page-container'>
@@ -57,8 +68,11 @@ function TabNavigationMenu({ pageRoute }) {
           <FaBars className={menuOpen ? 'menu-button-clicked' : 'menu-button'} onClick={menuClicked} />
         </div>
         <div
-          className={pageOne ? 'page-1 page-active' : 'page-1'}
+          className={pageOne ? 'page page-1 page-active' : 'page page-1'}
+          id='page-1'
           onClick={() => handlePageChange('PAGE1', '/')}
+          onMouseOver={() => handleTabTransitions('page-1', 'over')}
+          onMouseOut={() => handleTabTransitions('page-1', 'out')}
         >
           <div className={pageOneActive ? 'page-label-active' : 'page-label'}>
             <h3 className={pageOneActive ? 'page-label-text-active' : 'page-label-text'}>
@@ -70,8 +84,11 @@ function TabNavigationMenu({ pageRoute }) {
           </div>
         </div>
         <div
-          className={pageTwo ? 'page-2 page-active' : 'page-2'}
+          className={pageTwo ? 'page page-2 page-active' : 'page page-2'}
+          id='page-2'
           onClick={() => handlePageChange('PAGE2', '/projects')}
+          onMouseOver={() => handleTabTransitions('page-2', 'over')}
+          onMouseOut={() => handleTabTransitions('page-2', 'out')}
         >
           <div className={pageTwoActive ? 'page-label-active' : 'page-label'}>
             <h3 className={pageTwoActive ? 'page-label-text-active' : 'page-label-text'}>
@@ -83,8 +100,11 @@ function TabNavigationMenu({ pageRoute }) {
             }
         </div>
         <div
-          className={pageThree ? 'page-3 page-active' : 'page-3'}
+          className={pageThree ? 'page page-3 page-active' : 'page page-3'}
+          id='page-3'
           onClick={() => handlePageChange('PAGE3', '/resume')}
+          onMouseOver={() => handleTabTransitions('page-3', 'over')}
+          onMouseOut={() => handleTabTransitions('page-3', 'out')}
         >
           <div className={pageThreeActive ? 'page-label-active' : 'page-label'}>
             <h3 className={pageThreeActive ? 'page-label-text-active' : 'page-label-text'}>
@@ -96,8 +116,11 @@ function TabNavigationMenu({ pageRoute }) {
           </div>
         </div>
         <div
-          className={pageFour ? 'page-4 page-active' : 'page-4'}
+          className={pageFour ? 'page page-4 page-active' : 'page page-4'}
+          id='page-4'
           onClick={() => handlePageChange('PAGE4', '/contact')}
+          onMouseOver={() => handleTabTransitions('page-4', 'over')}
+          onMouseOut={() => handleTabTransitions('page-4', 'out')}
         > 
           <div className={pageFourActive ? 'page-label-active' : 'page-label'}>
             <h3 className={pageFourActive ? 'page-label-text-active' : 'page-label-text'}>
@@ -109,8 +132,11 @@ function TabNavigationMenu({ pageRoute }) {
           </div>
         </div>
         <div
-          className={pageFive ? 'page-5 page-active' : 'page-5'}
+          className={pageFive ? 'page page-5 page-active' : 'page page-5'}
+          id='page-5'
           onClick={() => handlePageChange('PAGE5', '/about')}
+          onMouseOver={() => handleTabTransitions('page-5', 'over')}
+          onMouseOut={() => handleTabTransitions('page-5', 'out')}
         > 
           <div className={pageFiveActive ? 'page-label-active' : 'page-label'}>
             <h3 className={pageFiveActive ? 'page-label-text-active' : 'page-label-text'}>
