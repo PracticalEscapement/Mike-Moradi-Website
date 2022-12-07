@@ -5,6 +5,7 @@
   --tab-page-color-3: #A2999E;
   --tab-page-color-4: #846A6A;
   --tab-page-color-5: #353B3C;
+  --mobile-page-label-color: #130f17;
 }
 
 .page-container {
@@ -58,10 +59,6 @@
   transition: .25s ease;
 }
 
-.tab__delay {
-  animation-delay: 1s;
-}
-
 .page-active {
   transform: translate(0vw, 0);
 }
@@ -96,14 +93,9 @@
   transform: rotate(0deg);
 }
 
-
-
 .menu-button {
   display: none;
 }
-
-
-/* Responsive section */
 
 @media (pointer: coarse) and (hover: none),
 only screen and (max-width: 768px) {
@@ -114,12 +106,7 @@ only screen and (max-width: 768px) {
     flex-direction: column;
   }
 
-  .page-1,
-  .page-2,
-  .page-3,
-  .page-4,
-  .page-5,
-  .page-active {
+  .page {
     position: absolute;
     left: 0px;
     height: 20vh;
@@ -188,14 +175,6 @@ only screen and (max-width: 768px) {
     transform: rotate(0deg);
   }
 
-  .page-label-text-dark {
-    color: #141414;
-  }
-  
-  .page-label-text-light {
-    color:  #141414;
-  }
-
   .menu-button__container {
     margin: 7%;
     position: relative;
@@ -218,23 +197,20 @@ only screen and (max-width: 768px) {
   .menu-button-clicked {
     visibility: hidden;
   }
+}
 
-  .menu-color-dark {
-    color: #141414;
+@media screen and (max-width: 450px) {
+  .page-container {
+    overflow: hidden;
+  }
+  .page-label-text-active {
+    margin-top: 5%;
+    font-size: 3.5rem;
   }
 
-  .menu-color-light {
-    color: #141414;
+  .page-label-text {
+    color: var(--mobile-page-label-color);
+    font-size: 3rem;
   }
-
-  @media screen and (max-width: 450px) {
-    .page-container {
-      overflow: hidden;
-    }
-    .page-label-text-active {
-      margin-top: 5%;
-      font-size: 3.5rem;
-    }
-  }
-
+  
 }
