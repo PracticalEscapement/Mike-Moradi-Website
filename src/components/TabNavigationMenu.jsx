@@ -14,6 +14,7 @@ function TabNavigationMenu({ pageRoute }) {
 
   const { dispatch, pages, pageLabels } = useContext(TabNavigationContext)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [pageChanging, setPageChanging] = useState(false)
   const navigate = useNavigate()
 
   const pageOne = pages.page1
@@ -33,6 +34,8 @@ function TabNavigationMenu({ pageRoute }) {
     setMenuOpen(false)
     localStorage.setItem("currentPage", JSON.stringify(page))
     navigate(path)
+    setPageChanging(true)
+    setTimeout(() => {setPageChanging(false)}, 1000)
   }
 
   const menuClicked = () => {
@@ -52,14 +55,15 @@ function TabNavigationMenu({ pageRoute }) {
 
   const handleTabTransitions = (id, e) => {
     const element = document.getElementById(id)
-    if (e === 'over') {
-      element.classList.add('tab__hover')
-    }
-    if (e === 'out') {
-      element.classList.remove('tab__hover')
+    if (!pageChanging) {
+      if (e === 'over') {
+        element.classList.add('tab__hover')
+      }
+      if (e === 'out') {
+        element.classList.remove('tab__hover')
+      }
     }
   }
-
 
   return (
     <>
